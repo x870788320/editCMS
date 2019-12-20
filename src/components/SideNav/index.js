@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import menuList from "../../resource/menuConfig"
 import { Menu } from 'antd'
 
@@ -35,6 +36,15 @@ class SideNav extends Component {
         })
     }
 
+    handleGo = (tar) => {
+        console.log(this.props)
+        this.props.history.push({
+            pathname: tar
+        })
+    }
+
+    handleOnClick = ({ key, item:{props} }) => this.handleGo(`/home/${key}`)
+
     renderSideMenu(data, child = false){
         child && this.state.openArr.length == 1 && this.state.defaultOpen.push(data[0].name)
         return data.map(item => {
@@ -53,7 +63,7 @@ class SideNav extends Component {
                 )
             }
             return (
-                <Menu.Item key = {item.name}>
+                <Menu.Item key = {item.name} onClick = {(parameter) => {this.handleOnClick(parameter)}}>
                     {item.title}
                 </Menu.Item>
             )
@@ -88,4 +98,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps)(SideNav);
+export default connect(mapStateToProps)(withRouter(SideNav));

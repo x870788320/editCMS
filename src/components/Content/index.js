@@ -7,6 +7,12 @@ export default class Content extends Component {
     render() {
         return (
             <div>
+                <p>
+                    欢迎登陆电视说明书系统！
+                </p>
+                <p>
+                    在这里你可以为所欲为！
+                </p>
             </div>
         )
     }

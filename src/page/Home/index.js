@@ -47,14 +47,12 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(ownProps)
     return {
         name: state.homeRe.name
     }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    console.log(dispatch)
     return {
         add: () => dispatch({
             type: 'ADD_LIST'

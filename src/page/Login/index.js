@@ -58,8 +58,11 @@ class Login extends Component {
 
     //跳转页面
     handleGo = () => {
+        let { state } = this.props.location
+        let pathname = state && state.from.pathname || '/home'
+        this.props.changeToken(true)
         this.props.history.push({
-            pathname: '/home',
+            pathname,
             userInfo:this.state.userInfo
         })
         // return this.props.handleGo()
@@ -120,14 +123,17 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    changeToken: ( login ) => dispatch({
+        type: 'CHANGE_LOGIN_STATE',
+        login
+    }),
+
     //尝试写一个共用跳转方法，但是没有解决this问题
-    return {
-        // handleGo: () => dispatch({
-        //     type: 'HANDLE_GO',
-        //     pathName: '/home'
-        // })
-    }
-}
+    // handleGo: () => dispatch({
+    //     type: 'HANDLE_GO',
+    //     pathName: '/home'
+    // })
+}) 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

@@ -1,5 +1,5 @@
 const publicState = {
-    
+    token: false
 }
 
 
@@ -8,8 +8,11 @@ const publicRe = (state = publicState, action) => {
         case 'HANDLE_GO':
             console.log(action)
             return state
-        case 'ACTION_TYPE_2':
-            return state
+        case 'CHANGE_LOGIN_STATE':
+            return {
+                ...state,
+                token: action.login
+            }
         default:
             return state
     }

@@ -7,6 +7,7 @@ import Router from './Router'
 import { Provider } from 'react-redux'
 import store from './store'
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+// import "echarts.min.js"
 
 
 ReactDOM.render(<Provider store = { store }><Router/></Provider>, document.getElementById('root'));
