@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 // function App() {
@@ -24,9 +24,9 @@ import './App.css';
 // }
 
 class App extends React.Component{
-  constructor(props){
-    super(props)
-  }
+  // constructor(props){
+  //   super(props)
+  // }
   componentDidMount(){
     console.log(this.props)
   }

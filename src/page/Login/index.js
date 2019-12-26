@@ -4,7 +4,7 @@ import { Card, Input, Button, Icon } from 'antd'
 
 
 import './index.less'
-import { Item } from "rc-menu";
+// import { Item } from "rc-menu";
 
 
 class Login extends Component {
@@ -59,7 +59,7 @@ class Login extends Component {
     //跳转页面
     handleGo = () => {
         let { state } = this.props.location
-        let pathname = state && state.from.pathname || '/home'
+        let pathname = (state && state.from.pathname) || '/home'
         this.props.changeToken(true)
         this.props.history.push({
             pathname,

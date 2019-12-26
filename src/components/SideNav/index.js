@@ -46,9 +46,9 @@ class SideNav extends Component {
     handleOnClick = ({ key, item:{props} }) => this.handleGo(`/home/${key}`)
 
     renderSideMenu(data, child = false){
-        child && this.state.openArr.length == 1 && this.state.defaultOpen.push(data[0].name)
+        child && this.state.openArr.length === 1 && this.state.defaultOpen.push(data[0].name)
         return data.map(item => {
-            !child && !this.state.openArr.find(val => val ==item.name) && this.state.openArr.push(item.name)
+            !child && !this.state.openArr.find(val => val === item.name) && this.state.openArr.push(item.name)
             if(item.children) {
                 return (
                     <SubMenu
@@ -92,10 +92,10 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//     return {
 
-    }
-}
+//     }
+// }
 
 export default connect(mapStateToProps)(withRouter(SideNav));

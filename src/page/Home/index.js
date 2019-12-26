@@ -3,8 +3,9 @@ import { connect } from "react-redux"
 import { Row, Col } from 'antd'
 import "./index.less"
 import Nav from '../../components/Nav'
+import HeaderInfo from '../../components/HeaderInfo'
 import SideNav from '../../components/SideNav'
-import Content from '../../components/Content'
+// import Content from '../../components/Content'
 
 
 
@@ -29,8 +30,11 @@ class Home extends Component {
             <div className = 'home'>
                  <Row className = 'header'>
                      <Col span = {3} className = 'loge'>CMS后台</Col>
-                     <Col span = {21} className = 'header_nav'>
+                     <Col span = {10} className = 'header_nav'>
                         <Nav/>
+                     </Col>
+                     <Col span = {11} className = 'header_nav'>
+                        <HeaderInfo/>
                      </Col>
                  </Row>
                  <Row className = 'body'>
@@ -61,3 +65,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
+
+
+// export default connect(
+//     state => ({ charts: state.charts }),
+//     dispatch => ({
+//         getChart: bindActionCreators(getChart, dispatch)
+//     })
+// )(HeatmapChart)

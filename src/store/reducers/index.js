@@ -1,5 +1,5 @@
 const publicState = {
-    token: false
+    token: true
 }
 
 

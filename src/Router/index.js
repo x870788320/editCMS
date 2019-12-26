@@ -14,7 +14,20 @@ import Annex from '../components/Content/Annex'
 import Journal from '../components/Content/Journal'
 import Menu from '../components/Content/Menu'
 import User from '../components/Content/User'
-// const Login = () => import('../page/Login') //异步加载待定
+
+// import asyncComponent from './asynComponent'
+// const Login = asyncComponent(() => import('../page/Login')) //异步加载
+// const Other = asyncComponent(() => import('../page/Other')) //异步加载
+// const NoMatch = asyncComponent(() => import('../page/NoMatch')) //异步加载
+// const Content = asyncComponent(() => import('../components/Content')) //异步加载
+// const Config = asyncComponent(() => import('../components/Content/Config')) //异步加载
+// const Network = asyncComponent(() => import('../components/Content/Network')) //异步加载
+// const Admin = asyncComponent(() => import('../components/Content/Admin')) //异步加载
+// const Annex = asyncComponent(() => import('../components/Content/Annex')) //异步加载
+// const Journal = asyncComponent(() => import('../components/Content/Journal')) //异步加载
+// const Menu = asyncComponent(() => import('../components/Content/Menu')) //异步加载
+// const User = asyncComponent(() => import('../components/Content/User')) //异步加载
+
 
 class Router extends Component {
     constructor() {

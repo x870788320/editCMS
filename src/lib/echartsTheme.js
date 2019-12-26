@@ -12,7 +12,7 @@ const echartsTheme = {
         "#546570",
         "#c4ccd3"
     ],
-    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundColor": "rgba(255, 0, 0, 1)",
     "textStyle": {},
     "title": {
         "textStyle": {
